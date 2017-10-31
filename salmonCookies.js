@@ -64,8 +64,7 @@ const pdxAirport = {
 // pdxAirport.render();
 pdxAirport.salesByHour();
 // pdxAirport.render();
-console.log(pdxAirport);
-console.log(pdxAirport.salesByHour[1]);
+
 
 // function render() {
 //     const div = document.getElementById('div');
@@ -99,23 +98,47 @@ for( let i = 0; i < pdxAirport.salesByHour.length; i++) {
         max: 24,
         avgCookie: 1.2,
         custPerHour: getRandomIntInclusive,
-        hourSale: hourSale,
+        salesByHour: hourSale,
         // render: render
     }
+    pioneerSquare.salesByHour();
+   
+    const pioneerdiv = document.getElementById('pioneerDiv');
+    const pioneerh2 = document.createElement('h2');
+    pioneerh2.textContent = pioneerSquare.name;
+    pioneerdiv.appendChild(pioneerh2);
     
-    // console.log(pioneerSquare.custPerHour(pioneerSquare.min,pioneerSquaree.max));
+    const pioneerlist = document.getElementById('pioneerUl');
+    for( let i = 0; i < pioneerSquare.salesByHour.length; i++) {
+            const li = document.createElement('li');
+            li.textContent = pioneerSquare.salesByHour[i].hour + ' - ' + pioneerSquare.salesByHour[i].cookiesSold;
+            pioneerlist.appendChild(li);
+        }
     
     const powell = {
-        name: 'Powell\'s',
+    name: 'Powell\'s',
     min: 11,
     max: 38,
     avgCookie: 3.7,
     custPerHour: getRandomIntInclusive,
-    hourSale: hourSale,
+    salesByHour: hourSale,
     // render: render
 }
+powell.salesByHour();
 
-// console.log(pioneerSquare.custPerHour(powell.min,powell.max));
+const powelldiv = document.getElementById('powellDiv');
+const powellh2 = document.createElement('h2');
+powellh2.textContent = powell.name;
+powelldiv.appendChild(powellh2);
+
+const powellList = document.getElementById('powellUl');
+for( let i = 0; i < powell.salesByHour.length; i++) {
+        const li = document.createElement('li');
+        li.textContent = powell.salesByHour[i].hour + ' - ' + powell.salesByHour[i].cookiesSold;
+        powellList.appendChild(li);
+    }
+
+
 
 
 const stJohn = {
@@ -124,9 +147,22 @@ const stJohn = {
     max: 38,
     avgCookie: 2.3,
     custPerHour: getRandomIntInclusive,
-    hourSale: hourSale,
+    salesByHour: hourSale,
     // render: render
 }
+stJohn.salesByHour();
+
+const stJohnDiv = document.getElementById('stJohnDiv');
+const stJohnh2 = document.createElement('h2');
+stJohnh2.textContent = stJohn.name;
+stJohnDiv.appendChild(stJohnh2);
+
+const stJohnList = document.getElementById('stJohnUl');
+for( let i = 0; i < powell.salesByHour.length; i++) {
+        const li = document.createElement('li');
+        li.textContent = stJohn.salesByHour[i].hour + ' - ' + stJohn.salesByHour[i].cookiesSold;
+        stJohnList.appendChild(li);
+    }
 
 
 const waterfront = {
@@ -135,24 +171,22 @@ const waterfront = {
     max: 16,
     avgCookie: 4.6,
     custPerHour: getRandomIntInclusive,
-    hourSale: hourSale,
+    salesByHour: hourSale,
     // render: render
 }
 
+waterfront.salesByHour();
+
+const waterfrontDiv = document.getElementById('waterfrontDiv');
+const waterfronth2 = document.createElement('h2');
+waterfronth2.textContent = waterfront.name;
+waterfrontDiv.appendChild(waterfronth2);
+
+const waterfrontList = document.getElementById('waterfrontUl');
+for( let i = 0; i < powell.salesByHour.length; i++) {
+        const li = document.createElement('li');
+        li.textContent = waterfront.salesByHour[i].hour + ' - ' + waterfront.salesByHour[i].cookiesSold;
+        waterfrontList.appendChild(li);
+    }
+
 const stores = ["pdxAirport", "pioneerSquare", "powell", "stJohn", "waterfront"];
-// for (let i = 0; i < stores.length; i ++){
-//     stores[i].render();
-// }
-
-// console.log('this is waterfront custperHour ' + waterfront.custPerHour())
-
-// const cars = [pinto, tesla, gremlin];
-
-// const ul = document.getElementById('car-list');
-
-// for(let i = 0; i < cars.length; i++) {
-    //     const li = cars[i].render();
-    //     ul.appendChild(li);
-    // }
-    
-    
