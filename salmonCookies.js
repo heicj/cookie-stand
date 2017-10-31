@@ -32,12 +32,46 @@ function Store (name,min,max,avgCookie) {
     this.min = min;
     this.max = max;
     this.avgCookie = avgCookie;
-    
+    this.hours = hours;    
     this.salesByHour = hourSale;
     // this.render = render
+    
 }
 
+// function TableHeader(){
+//     const head = document.getElementById('table');
+//     const headRow = document.createElement('thead');
+//     head.appendChild.headRow;
+//     const tr = document.createElement('tr');
+//     for ( let i = 0; i < hours.length; i++){
+//         const td = document.createElement('td');
+//         td.textContent = hours[i];
+//         tr.appendChild.td;
+//     }
+// }
+// TableHeader();
+
+// function render(){
+//     const span = document.getElementById('span');
+//     const div = document.createElement('div');
+//     const h2 = document.createElement('h2');
+//     h2.textContent = this.name;
+//     div.appendChild.h2;
+
+//     const ul = document.getElementById('ul');
+//     for( let i = 0; i < this.salesByHour.length; i++) {
+//             const li = document.createElement('li');
+//             li.textContent = this.salesByHour[i].hour + ' - ' + this.salesByHour[i].cookiesSold
+//             ul.appendChild(li);
+//         }
+//     div.appendChild.ul;
+//     return div;
+    
+
+// }
+
 const pdxAirport = new Store ('PDX Airport',23,65,6.3);
+console.log(pdxAirport);
 const pioneerSquare = new Store('Pioneer Square', 3,24,1.2);
 const powell = new Store('Powell\'s',11,38,3.7);
 const stJohn = new Store('St John',20,38,2.3);
@@ -57,9 +91,8 @@ const waterfront = new Store('Waterfront', 2,16,4.6);
 //     custPerHour: getRandomIntInclusive,
 //     salesByHour: hourSale,
 //     // render: render
-    
-    
 // }
+
 // pdxAirport.render();
 pdxAirport.salesByHour();
 // pdxAirport.render();
