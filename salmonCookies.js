@@ -10,6 +10,7 @@ function getRandomIntInclusive(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min; //The maximum is inclusive and the minimum is inclusive 
 }
 
+//code from Marty and Charly Help
 function hourSale () {
     const salesByHour = [];
     for (let i = 0; i < hours.length; i++ ) {
