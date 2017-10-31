@@ -22,6 +22,14 @@ function hourSale () {
 
 }
 
+function render () {
+    const ul = document.getElementById('ul');
+    const li = document.createElement('li');
+    li.textContent = 'test';
+    ul.appendChild(li);
+}
+
+
 
 const hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
 
@@ -31,10 +39,10 @@ const pdxAirport = {
     max: 65,
     avgCookie: 6.3,
     custPerHour: getRandomIntInclusive,
-    hourSale: hourSale
-    
+    hourSale: hourSale,
+    render: render
 }
-
+pdxAirport.render();
 pdxAirport.hourSale();
 console.log(pdxAirport);
 
