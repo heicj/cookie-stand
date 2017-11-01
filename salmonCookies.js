@@ -59,6 +59,14 @@ function renderTimes(){
 renderTimes();
 
 
+//creates table footer that is the sum of the column
+function renderFooter(){
+    const foot = document.getElementById('tfoot');
+    const total = document.createElement('td');
+    foot.appendChild(total);
+}
+
+
 //constructor function that lets stores create their row of table data
 Store.prototype.renderStore = function (){
     
@@ -69,7 +77,7 @@ Store.prototype.renderStore = function (){
     name.textContent = this.name;
     row.appendChild(name);
     for (let i = 0; i < hours.length; i++){
-        console.log(i);
+        
         const td = document.createElement('td');
         td.textContent = this.salesByHour[i].cookiesSold;
         row.appendChild(td);
@@ -88,8 +96,9 @@ form.addEventListener('submit', function(e){
 
     const newStore = new Store(name,min,max,avg);
     newStore.hourSale();
-    tableBody.appendChild(newStore.renderStore());
-})
+    newStore.renderStore();
+});
+
 
 
 
@@ -121,8 +130,25 @@ stJohn.hourSale();
 stJohn.renderStore();
 
 
+//code to navigate table from https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
+const mybody = document.getElementsByTagName("body")[0];
+const mytable = mybody.getElementsByTagName("table")[0];
+const mytablebody = mytable.getElementsByTagName("tbody")[0];
+const myrow = mytablebody.getElementsByTagName("tr")[0];
+const mycel = myrow.getElementsByTagName("td")[1];
+
+// // first item element of the childNodes list of mycel
+const myceltext=mycel.childNodes[0];
+console.log(myceltext);
+
+// // content of currenttext is the data content of myceltext
+// currenttext=document.createTextNode(myceltext.data);
+// mybody.appendChild(currenttext);
 
 
+// console.log(mytablebody);
+
+console.log(myrow);
 // const pdxAirport = {
 //     name: 'PDX Airport',
 //     min: 23,
