@@ -64,6 +64,9 @@ function renderTimes(){
     table.appendChild(head);
     
     }
+    const totals = document.createElement('th');
+    totals.textContent = "Store Totals";
+    table.appendChild(totals);
 }
 
 renderTimes();
@@ -92,7 +95,9 @@ Store.prototype.renderStore = function (){
         td.textContent = this.salesByHour[i].cookiesSold;
         row.appendChild(td);
     }
-    // table.appendChild(body);
+    const total = document.createElement('td');
+    total.textContent = this.storeTotal;
+    row.appendChild(total);
 }
 
 const form = document.getElementById('newStore');
