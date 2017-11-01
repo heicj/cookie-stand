@@ -8,16 +8,7 @@
 </head>
 <body id = "body">
     <span id = "span"></span>
-    <div id = "div"></div>
-        <ul id= "ul"></ul>
-    <div id = "pioneerDiv"></div>
-        <ul id= "pioneerUl"></ul>
-    <div id = "powellDiv"></div>
-        <ul id = "powellUl"></ul>
-    <div id = "stJohnDiv"></div>
-        <ul id = "stJohnUl"></ul>
-    <div id = "waterfrontDiv"></div>
-        <ul id = "waterfrontUl"></ul>
+    
     <table id = "table">
         <thead id= "tableHead">
             <tr id = 'firstRow'>
@@ -28,6 +19,25 @@
         </tbody>
 
     </table>
+
+    <form id='newStore'>
+        <fieldset>
+            <legend>Create New Store</legend>
+            <label for = 'name'>Store Name:</label>
+            <input id = 'name' type = 'text' required>
+            <label for ='min'>Min:</label>
+            <input id ='min' type='number' required>
+            <label for ='max'>Max:</label>
+            <input id ='max' type ='number' required>
+            <label for='avg'>Avg. Cookies</label>
+            <input id = 'avg' type='number' required>
+            <button type = 'submit'>Create Store</button>
+        </fieldset>
+
+        
+
+
+    </form>
     <script src = "salmonCookies.js"></script>
 </body>
 </html>

@@ -77,6 +77,20 @@ Store.prototype.renderStore = function (){
     // table.appendChild(body);
 }
 
+const form = document.getElementById('newStore');
+form.addEventListener('submit', function(e){
+    e.preventDefault();
+    console.log('event happened');
+    const name = document.getElementById('name').value;
+    const min = document.getElementById('min').value;
+    const max = document.getElementById('max').value;
+    const avg = document.getElementById('avg').value;
+
+    const newStore = new Store(name,min,max,avg);
+    newStore.hourSale();
+    tableBody.appendChild(newStore.renderStore());
+})
+
 
 
 
@@ -85,7 +99,7 @@ Store.prototype.renderStore = function (){
 
 
 const pdxAirport = new Store ('PDX Airport',23,65,6.3);
-console.log(pdxAirport);
+// console.log(pdxAirport);
 const pioneerSquare = new Store('Pioneer Square', 3,24,1.2);
 const powell = new Store('Powell\'s',11,38,3.7);
 const stJohn = new Store('St John',20,38,2.3);
@@ -105,6 +119,8 @@ powell.renderStore();
 
 stJohn.hourSale();
 stJohn.renderStore();
+
+
 
 
 // const pdxAirport = {
