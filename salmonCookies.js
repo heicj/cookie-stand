@@ -36,10 +36,20 @@ function Store (name,min,max,avgCookie) {
     this.max = max;
     this.avgCookie = avgCookie;
     this.hours = hours;    
+    this.storeTotal = 0
+    this.hourSale();
+    for(let i = 0; i < this.hours.length; i ++){
+        this.storeTotal += this.salesByHour[i].cookiesSold;
+    }
+    console.log(this.name + 'this is storeTotal ' + this.storeTotal);
+    
+        
     
     // this.render = render
     
 }
+
+
 
 //creates the table header 
 function renderTimes(){
@@ -108,32 +118,27 @@ form.addEventListener('submit', function(e){
 
 
 const pdxAirport = new Store ('PDX Airport',23,65,6.3);
-// console.log(pdxAirport);
+console.log(pdxAirport);
 const pioneerSquare = new Store('Pioneer Square', 3,24,1.2);
 const powell = new Store('Powell\'s',11,38,3.7);
 const stJohn = new Store('St John',20,38,2.3);
 const waterfront = new Store('Waterfront', 2,16,4.6);
 
-waterfront.hourSale();
 waterfront.renderStore();
 
-pdxAirport.hourSale();
 pdxAirport.renderStore();
 
-pioneerSquare.hourSale();
 pioneerSquare.renderStore();
 
-powell.hourSale();
 powell.renderStore();
 
-stJohn.hourSale();
 stJohn.renderStore();
 
 
 //code to navigate table from https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
-const mybody = document.getElementsByTagName("body")[0];
-const mytable = mybody.getElementsByTagName("table")[0];
-const mytablebody = mytable.getElementsByTagName("tbody")[0];
+// const mybody = document.getElementsByTagName("body")[0];
+// const mytable = mybody.getElementsByTagName("table")[0];
+const mytablebody = document.getElementsByTagName("tbody")[0];
 const myrow = mytablebody.getElementsByTagName("tr")[0];
 const mycel = myrow.getElementsByTagName("td")[1];
 
