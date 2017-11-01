@@ -11,7 +11,7 @@ function getRandomIntInclusive(min, max) {
 }
 
 //code from Marty and Charly Help
-function hourSale () {
+Store.prototype.hourSale = function () {
     const salesByHour = [];
     for (let i = 0; i < hours.length; i++ ) {
         const hour = hours[i];
@@ -33,23 +33,44 @@ function Store (name,min,max,avgCookie) {
     this.max = max;
     this.avgCookie = avgCookie;
     this.hours = hours;    
-    this.salesByHour = hourSale;
+    
     // this.render = render
     
 }
 
-// function TableHeader(){
-//     const head = document.getElementById('table');
-//     const headRow = document.createElement('thead');
-//     head.appendChild.headRow;
-//     const tr = document.createElement('tr');
-//     for ( let i = 0; i < hours.length; i++){
-//         const td = document.createElement('td');
-//         td.textContent = hours[i];
-//         tr.appendChild.td;
-//     }
-// }
-// TableHeader();
+function renderTimes(){
+    const table = document.getElementById('firstRow');
+    
+    
+    for (let i =0; i < hours.length; i++){
+    const head = document.createElement('th');
+    head.textContent = hours[i];
+    table.appendChild(head);
+    
+    }
+}
+
+renderTimes();
+
+Store.prototype.renderStore = function (){
+    
+    const body = document.getElementById('tableBody');
+    const row = document.createElement('tr');
+    body.appendChild(row);
+    for (let i = 0; i < hours.length; i++){
+    console.log(i);
+    const td = document.createElement('td');
+    td.textContent = this.salesByHour[i].cookiesSold;
+    row.appendChild(td);
+    }
+    // table.appendChild(body);
+}
+
+
+
+
+
+
 
 // function render(){
 //     const span = document.getElementById('span');
@@ -94,7 +115,8 @@ const waterfront = new Store('Waterfront', 2,16,4.6);
 // }
 
 // pdxAirport.render();
-pdxAirport.salesByHour();
+pdxAirport.hourSale();
+pdxAirport.renderStore();
 // pdxAirport.render();
 
 
@@ -133,7 +155,7 @@ for( let i = 0; i < pdxAirport.salesByHour.length; i++) {
 //     salesByHour: hourSale,
 //     // render: render
 //     }
-    pioneerSquare.salesByHour();
+    pioneerSquare.hourSale();
    
     const pioneerdiv = document.getElementById('pioneerDiv');
     const pioneerh2 = document.createElement('h2');
@@ -156,7 +178,7 @@ for( let i = 0; i < pdxAirport.salesByHour.length; i++) {
 //     salesByHour: hourSale,
 //     // render: render
 // }
-powell.salesByHour();
+powell.hourSale();
 
 const powelldiv = document.getElementById('powellDiv');
 const powellh2 = document.createElement('h2');
@@ -182,7 +204,7 @@ for( let i = 0; i < powell.salesByHour.length; i++) {
 //     salesByHour: hourSale,
 //     // render: render
 // }
-stJohn.salesByHour();
+stJohn.hourSale();
 
 const stJohnDiv = document.getElementById('stJohnDiv');
 const stJohnh2 = document.createElement('h2');
@@ -207,7 +229,7 @@ for( let i = 0; i < powell.salesByHour.length; i++) {
 //     // render: render
 // }
 
-waterfront.salesByHour();
+waterfront.hourSale();
 
 const waterfrontDiv = document.getElementById('waterfrontDiv');
 const waterfronth2 = document.createElement('h2');
