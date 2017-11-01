@@ -12,6 +12,7 @@ function getRandomIntInclusive(min, max) {
 }
 
 //code from Marty and Charly Help
+//populates saleByHour property of object with array of hour and numCookies
 Store.prototype.hourSale = function () {
     const salesByHour = [];
     for (let i = 0; i < hours.length; i++ ) {
@@ -27,6 +28,7 @@ Store.prototype.hourSale = function () {
     this.salesByHour = salesByHour;
 }
 
+//constructor function for stores
 function Store (name,min,max,avgCookie) {
     
     this.name = name;
@@ -39,6 +41,7 @@ function Store (name,min,max,avgCookie) {
     
 }
 
+//creates the table header 
 function renderTimes(){
     const table = document.getElementById('firstRow');
     const blank = document.createElement('th');
@@ -55,6 +58,8 @@ function renderTimes(){
 
 renderTimes();
 
+
+//constructor function that lets stores create their row of table data
 Store.prototype.renderStore = function (){
     
     const body = document.getElementById('tableBody');
