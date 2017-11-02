@@ -1,4 +1,15 @@
+body{
+       
+    justify-content: space-around;
+    position: relative;
+    background-color: lightcyan;
+}
 
+
+h1{
+    margin-left: 680px;
+    padding: 30px;
+}
 
 table{
     width: 500;
@@ -6,6 +17,7 @@ table{
     margin: auto;
     border: 1px solid black;
     text-align: right;
+    font-family: Arial, Verdana, sans-serif;
 }
 
 
@@ -20,12 +32,13 @@ td{
 }
 
 tr:hover{
-    background-color: rgba(211, 211, 211, 0.349);
+    background-color: rgba(14, 125, 133, 0.349);
 }
 
 td:hover{
-    background-color: darkgray;
+    background-color: rgba(21, 56, 95, 0.623);
     color:white;
+    
 }
 
 
@@ -61,6 +74,8 @@ button{
     border-radius: 4px;
     border: 1px solid black;
     box-shadow: 3px 2px 3px black;
+    margin-left: 190px;
+    margin-top: 10px;
 }
 button:hover{
     background-color: lightgrey;
@@ -70,7 +85,14 @@ button:hover{
 #newStore{
     width: 800px;
     margin: auto;
+}
+
+img#title{
+    width: 150px
     
-    
-    
+}
+
+#header{
+    position: relative;
+
 }
