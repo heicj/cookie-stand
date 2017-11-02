@@ -1,15 +1,14 @@
+
+
 table{
     width: 500;
     border-collapse: collapse;
     margin: auto;
-}
-
-table#table{
-    
     border: 1px solid black;
     text-align: right;
-
 }
+
+
 th{
     padding: 2px 5px 2px 5px;
     border-bottom: 1px solid black;
@@ -20,14 +19,58 @@ td{
     
 }
 
-
-
 tr:hover{
+    background-color: rgba(211, 211, 211, 0.349);
+}
+
+td:hover{
+    background-color: darkgray;
+    color:white;
+}
+
+
+input{
+    width: 50%;
+    margin: 8px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    display: flex;
+    margin: auto;
+    box-shadow: 1px 2px 1px black;
+}
+
+label{
+    margin: auto;
+    
+    width: auto;
+}
+
+input:focus{
+    background-color: rgba(233, 233, 233, 0.486);
+}
+
+legend{
+    margin:auto;
+    font-size: 30px;
+    font-style: italic;
+}
+
+button{
+    width: 50%;
+    background-color: white;
+    border-radius: 4px;
+    border: 1px solid black;
+    box-shadow: 3px 2px 3px black;
+}
+button:hover{
     background-color: lightgrey;
 }
+
 
 #newStore{
     width: 800px;
     margin: auto;
+    
+    
     
 }
