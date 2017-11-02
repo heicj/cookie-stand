@@ -2,7 +2,7 @@
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 
 const hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
-const stores = ["pdxAirport", "pioneerSquare", "powell", "stJohn", "waterfront"];
+// const stores = ["pdxAirport", "pioneerSquare", "powell", "stJohn", "waterfront"];
 
 
 function getRandomIntInclusive(min, max) {
@@ -22,31 +22,24 @@ Store.prototype.hourSale = function () {
         const oneHour = {
             hour: hour,
             cookiesSold: numCookies
-        }
+        };
         salesByHour.push(oneHour);
     }
     this.salesByHour = salesByHour;
-}
+};
 
 //constructor function for stores
 function Store (name,min,max,avgCookie) {
-    
     this.name = name;
     this.min = min;
     this.max = max;
     this.avgCookie = avgCookie;
-    this.hours = hours;    
-    this.storeTotal = 0
+    this.hours = hours;
+    this.storeTotal = 0;
     this.hourSale();
     for(let i = 0; i < this.hours.length; i ++){
         this.storeTotal += this.salesByHour[i].cookiesSold;
     }
-    
-    
-        
-    
-    // this.render = render
-    
 }
 
 
@@ -57,15 +50,13 @@ function renderTimes(){
     const blank = document.createElement('th');
     blank.textContent = ' ';
     table.appendChild(blank);
-    
-    for (let i =0; i < hours.length; i++){
-    const head = document.createElement('th');
-    head.textContent = hours[i];
-    table.appendChild(head);
-    
+    for (let i = 0; i < hours.length; i++){
+        const head = document.createElement('th');
+        head.textContent = hours[i];
+        table.appendChild(head);
     }
     const totals = document.createElement('th');
-    totals.textContent = "Store Totals";
+    totals.textContent = 'Store Totals';
     table.appendChild(totals);
 }
 
@@ -73,25 +64,22 @@ renderTimes();
 
 
 //creates table footer that is the sum of the column
-function renderFooter(){
-    const foot = document.getElementById('tfoot');
-    const total = document.createElement('td');
-    foot.appendChild(total);
-}
+// function renderFooter(){
+//     const foot = document.getElementById('tfoot');
+//     const total = document.createElement('td');
+//     foot.appendChild(total);
+// }
 
 
 //constructor function that lets stores create their row of table data
 Store.prototype.renderStore = function (){
-    
     const body = document.getElementById('tableBody');
     const row = document.createElement('tr');
-    
     body.appendChild(row);
-    const name = document.createElement('td')
+    const name = document.createElement('td');
     name.textContent = this.name;
     row.appendChild(name);
     for (let i = 0; i < hours.length; i++){
-        
         const td = document.createElement('td');
         td.textContent = this.salesByHour[i].cookiesSold;
         row.appendChild(td);
@@ -99,19 +87,17 @@ Store.prototype.renderStore = function (){
     const total = document.createElement('td');
     total.textContent = this.storeTotal;
     row.appendChild(total);
-}
+};
 
 const form = document.getElementById('newStore');
 form.addEventListener('submit', function(e){
     e.preventDefault();
-    
     const name = document.getElementById('name').value;
     const min = document.getElementById('min').value;
     const max = document.getElementById('max').value;
     const avg = document.getElementById('avg').value;
 
     const newStore = new Store(name,min,max,avg);
-   
     newStore.renderStore();
 });
 
