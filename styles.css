@@ -1,5 +1,7 @@
 table{
     width: 500;
+    border-collapse: collapse;
+    margin: auto;
 }
 
 table#table{
@@ -8,11 +10,24 @@ table#table{
     text-align: right;
 
 }
-th,td {
+th{
     padding: 2px 5px 2px 5px;
-    border-bottom: 4px black;
+    border-bottom: 1px solid black;
 }
+
+td{
+    border-bottom: 1px solid black;
+    
+}
+
+
 
 tr:hover{
     background-color: lightgrey;
+}
+
+#newStore{
+    width: 800px;
+    margin: auto;
+    
 }
