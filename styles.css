@@ -1,16 +1,79 @@
-body{
-       
+#salesBody{
+    display: block;      
     justify-content: space-around;
-    position: relative;
+    
     background-color: lightcyan;
 }
 
-
-h1{
-    margin-left: 680px;
-    padding: 30px;
+#indexBody{
+    display:block;
 }
 
+#titleImg{
+    margin: 0 auto;
+    display: block;
+    filter:sepia(60%);
+    
+
+}
+
+#family{
+    width: 250px;
+    height: auto;
+}
+    
+}
+
+#title{
+    font-family: 'Bree Serif', serif;
+    font-size: 5rem;
+    text-align: center;
+    /* margin-left: 680px;
+    margin-top: 10px;
+    margin-bottom: 0px; */
+    padding: 10px;
+    margin: 0 auto;
+    
+}
+
+div#header{
+    border-bottom: 2px solid black
+    
+}
+
+#salesHead{
+    display:block;
+    text-align:center;
+
+}
+#navigationList{
+    display:block;
+    height: 10px;
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 5px;
+    display: flex;
+    text-align: center;
+    border-bottom: 2px solid gray;
+    justify-content: space-around;
+}
+div#navigation{
+    
+    height: 10px;
+    list-style-type: none;
+   
+    padding: 5px;
+}
+
+li.navList{
+    
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+li.navList:hover{
+    color:red;
+}
 table{
     width: 500;
     border-collapse: collapse;
@@ -87,12 +150,8 @@ button:hover{
     margin: auto;
 }
 
-img#title{
-    width: 150px
+img{
     
-}
+    
 
-#header{
-    position: relative;
 
-}
