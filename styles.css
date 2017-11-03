@@ -17,11 +17,35 @@
 
 }
 
-#family{
-    width: 250px;
+#frosted{
+    width: 80px;
     height: auto;
 }
+.top{
+    width: 650px;
+    margin-top: 50px;
+}
+
+#aboutCookies{
+    display:flex;
+}
+
+img.bodyImages{
+    height: 250px;
+    width: auto;
+}
+/* #family{
+    width: auto;
+    height: 250px;
+}
+
+#cookieCutter{
+    height: 250px;
+    width: auto;
+} */
     
+h2{
+    margin-bottom: 0px;
 }
 
 #title{
