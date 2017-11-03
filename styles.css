@@ -21,13 +21,11 @@
     width: 80px;
     height: auto;
 }
-.top{
-    width: 650px;
-    margin-top: 50px;
-}
+
 
 #aboutCookies{
     display:flex;
+    justify-content:space-around;
 }
 
 img.bodyImages{
@@ -61,7 +59,9 @@ h2{
 }
 
 div#header{
-    border-bottom: 2px solid black
+    border-bottom: 2px solid black;
+   background-color: #dec18f;
+   color: #544e42;
     
 }
 
@@ -80,6 +80,7 @@ div#header{
     text-align: center;
     border-bottom: 2px solid gray;
     justify-content: space-around;
+    background-color: #a37e5e;
 }
 div#navigation{
     
@@ -105,6 +106,14 @@ table{
     border: 1px solid black;
     text-align: right;
     font-family: Arial, Verdana, sans-serif;
+}
+
+.top{
+    width: 750px;
+}
+
+#salesHead{
+    font-size: 4rem;
 }
 
 
@@ -134,15 +143,17 @@ input{
     margin: 8px;
     box-sizing: border-box;
     border-radius: 4px;
-    display: flex;
+    display: block;
     margin: auto;
     box-shadow: 1px 2px 1px black;
 }
 
 label{
     margin: auto;
-    
+    display: block;
     width: auto;
+    text-align: center;
+    padding-top: 10px;
 }
 
 input:focus{
@@ -171,11 +182,11 @@ button:hover{
 
 #newStore{
     width: 800px;
+    height: 1200px;
     margin: auto;
 }
 
-img{
-    
+
     
 
 
