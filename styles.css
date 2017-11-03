@@ -2,19 +2,33 @@
     display: block;      
     justify-content: space-around;
     
-    background-color: lightcyan;
+    background-color: #dec18f;
 }
 
 #indexBody{
     display:block;
 }
 
+#merchLocations{
+    display: flex;
+}
+
+#merch{
+    flex-basis: 75%;
+}
+
 #titleImg{
     margin: 0 auto;
     display: block;
     filter:sepia(60%);
-    
+}
 
+#lists{
+    display: block;
+}
+
+.locationLists{
+    flex-basis: 50%;
 }
 
 #frosted{
@@ -58,7 +72,7 @@ h2{
     
 }
 
-div#header{
+#header{
     border-bottom: 2px solid black;
    background-color: #dec18f;
    color: #544e42;
@@ -128,7 +142,7 @@ td{
 }
 
 tr:hover{
-    background-color: rgba(14, 125, 133, 0.349);
+    background-color: rgba(81, 88, 88, 0.349);
 }
 
 td:hover{
