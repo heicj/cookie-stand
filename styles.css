@@ -16,6 +16,7 @@
 #indexBody{
     display:block;
     width: 80%;
+    
     margin: 0 auto;
     justify-content: space-around;
     background-color:tan;
@@ -125,6 +126,13 @@ p{
 
 }
 
+img#footerImg{
+    margin: 0 auto;
+    height: 20px;
+    width: auto;
+    
+}
+
 
 
     
@@ -182,7 +190,7 @@ tr:hover{
 }
 
 td:hover{
-    background-color: rgba(21, 56, 95, 0.623);
+    background-color: rgba(95, 21, 27, 0.623);
     color:white;
     
 }
