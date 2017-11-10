@@ -62,6 +62,14 @@ a:hover{
     filter:sepia(60%);
 }
 
+#titleImg:hover{
+
+    animation-name: rotate;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    transform: rotateY(180deg);
+}
+
 #navigationList{
     display:block;
     height: 10px;
