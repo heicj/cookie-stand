@@ -44,9 +44,22 @@ img.bodyImages{
     font-size: 5rem;
     text-align: center;
     padding: 10px;
-    margin: 0 auto;
-    
-    
+    margin-top:0px;
+    /* margin: 0 auto; */
+    margin-bottom: 0px;
+    animation-name: slideIn;
+    animation-duration: 2s;
+}
+
+
+@keyframes slideIn{
+    from{
+        margin-left: 150%;
+    }
+    to{
+        margin-left: 0%;
+    }
+
 }
 
 a{
@@ -61,6 +74,14 @@ a:hover{
     margin: 0 auto;
     display: block;
     filter:sepia(60%);
+}
+
+#titleImg:hover{
+
+    animation-name: rotate;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    transform: rotateY(180deg);
 }
 
 #navigationList{
